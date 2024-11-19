@@ -14,6 +14,7 @@ export const fetchAllData = () => async (dispatch) => {
     dispatch({ type: DATA_REQUEST });
     const { data } = await axios.get(
       "https://api.quicksell.co/v1/internal/frontend-assignment/"
+      
     );
     dispatch({ type: DATA_SUCCESS, payload: data });
   } catch (error) {
